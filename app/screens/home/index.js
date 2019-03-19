@@ -1,12 +1,19 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View } from 'react-native'
+import { Text, StyleSheet, View, SafeAreaView } from 'react-native'
+import CardTwoImage from '../../components/CardTwoImage';
+import CardOneImage from '../../components/CardOneImage';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default class HomeScreen extends Component {
   render() {
     return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
+      <SafeAreaView>
+      <ScrollView>
+       
+        <CardOneImage/>
+        <CardTwoImage />
+        </ScrollView>
+      </SafeAreaView>
     )
   }
 }
