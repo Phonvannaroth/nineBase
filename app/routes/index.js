@@ -12,6 +12,7 @@ import { COLORS } from "../modules";
 import SettingScreen from "../screens/settings";
 import HomeScreen from "../screens/home";
 import LoginScreen from "../screens/login";
+// import DetailScreen from "../screens/home/Detail"
 
 const SettingsStack = createStackNavigator(
   {
@@ -22,7 +23,8 @@ const SettingsStack = createStackNavigator(
 
 const HomeStack = createStackNavigator(
   {
-    Home: HomeScreen
+    Home: HomeScreen,
+    
   },
   {
     headerMode: "none"
