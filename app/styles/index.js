@@ -72,16 +72,21 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "center"
   },
-  cardShadowBottom:{
+  cardShadowBottom: {
     backgroundColor: COLORS.WHITE,
     shadowColor: "#CFCCDC",
     shadowOffset: {
       width: 0,
-      height: 10,
+      height: 10
     },
     shadowRadius: 5,
     shadowOpacity: 0.3,
     elevation: 5,
-    marginBottom: LAYOUT.BODY_HORIZONTAL,
+    marginBottom: LAYOUT.BODY_HORIZONTAL
   },
+  imageBox: {
+    height: "100%",
+    width: "100%",
+    resizeMode: "cover"
+  }
 });
