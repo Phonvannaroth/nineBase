@@ -11,13 +11,13 @@ let cardWidth = (width / 2) - LAYOUT.BODY_HORIZONTAL - marginCard;
 let buttom = width - LAYOUT.BODY_HORIZONTAL - marginCard;
 
 
-export default CardOneImage = () => {
+export default CardOneImage = ({onSelected}) => {
     return (
         <View>
        
             <View style={{  flexDirection: "row", flexWrap: "wrap", paddingHorizontal: LAYOUT.BODY_HORIZONTAL - marginCard }}>
             <Text style={styles.txtMain}>Homes around the world</Text>
-                <TouchableOpacity style={styles.card} >
+                <TouchableOpacity onPress={onSelected} style={styles.card} >
                     <ImageBackground source={require('../img/location.jpg')} style={styles.img} />
                     <View style={styles.contain}>
                         <View style={styles.containHeader}>
@@ -28,7 +28,7 @@ export default CardOneImage = () => {
                         <Text style={styles.txtSub}>★★★★☆ 227. Superhost</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.card} >
+                <TouchableOpacity onPress={onSelected} style={styles.card} >
                     <ImageBackground source={require('../img/location1.jpg')} style={styles.img} />
                     <View style={styles.contain}>
                         <View style={styles.containHeader}>
@@ -39,7 +39,7 @@ export default CardOneImage = () => {
                         <Text style={styles.txtSub}>★★★★☆ 227. Superhost</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.card} >
+                <TouchableOpacity onPress={onSelected} style={styles.card} >
                     <ImageBackground source={require('../img/loacation2.jpg')} style={styles.img} />
                     <View style={styles.contain}>
                         <View style={styles.containHeader}>
@@ -50,7 +50,7 @@ export default CardOneImage = () => {
                         <Text style={styles.txtSub}>★★★★☆ 227. Superhost</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.card} >
+                <TouchableOpacity onPress={onSelected} style={styles.card} >
                     <ImageBackground source={require('../img/location3.jpg')} style={styles.img} />
                     <View style={styles.contain}>
                         <View style={styles.containHeader}>
@@ -63,7 +63,7 @@ export default CardOneImage = () => {
                 </TouchableOpacity>
 
             </View>
-            <TouchableOpacity style = {styles.btn} >
+            <TouchableOpacity onPress={onSelected} style = {styles.btn} >
 
         <Text style={styles.txtBtn}>Show all (200+)</Text>
             </TouchableOpacity>

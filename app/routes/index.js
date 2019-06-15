@@ -12,7 +12,8 @@ import { COLORS } from "../modules";
 import SettingScreen from "../screens/settings";
 import HomeScreen from "../screens/home";
 import LoginScreen from "../screens/login";
-// import DetailScreen from "../screens/home/Detail"
+import DetailScreen from "../screens/home/Detail";
+import ProfileScreen from "../screens/profile";
 
 const SettingsStack = createStackNavigator(
   {
@@ -24,7 +25,7 @@ const SettingsStack = createStackNavigator(
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
-    
+    Detail: DetailScreen
   },
   {
     headerMode: "none"
@@ -43,7 +44,8 @@ HomeStack.navigationOptions = ({ navigation }) => {
 const TabNavigation = createBottomTabNavigator(
   {
     HomeTab: HomeStack,
-    SettingsTab: SettingsStack
+    SettingsTab: SettingsStack,
+    ProfileTab: ProfileScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -57,6 +59,8 @@ const TabNavigation = createBottomTabNavigator(
           iconName = `home`;
         } else if (routeName === "SettingsTab") {
           iconName = `settings`;
+        } else if (routeName === "ProfileTab") {
+          iconName = `user`;
         }
         return (
           <View style={_styles.iconTabContainer}>
@@ -71,6 +75,8 @@ const TabNavigation = createBottomTabNavigator(
           labelName = `Home`;
         } else if (routeName === "SettingsTab") {
           labelName = `Settings`;
+        } else if (routeName === "ProfileTab") {
+          labelName = `Profile`;
         }
         return (
           <Text style={focused ? _styles.labelTabActive : _styles.labelTab}>

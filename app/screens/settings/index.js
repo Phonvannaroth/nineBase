@@ -5,7 +5,7 @@ export default class index extends Component {
   render() {
     return (
       <View style={{flex:1, justifyContent:"center", alignItems: "center"}}>
-        <Text> Setting Screen </Text>
+        <Text> Setting </Text>
       </View>
     )
   }

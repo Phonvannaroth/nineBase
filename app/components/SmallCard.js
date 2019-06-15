@@ -3,9 +3,9 @@ import { Text, StyleSheet, View, ImageBackground } from "react-native";
 import { fontSemiBold, fontBold } from "../../functions/customFont";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default (SmallCard = ({ txt, image }) => {
+export default (SmallCard = ({ txt, image, onSelected }) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={onSelected}>
       <View style={styles.container}>
         <ImageBackground style={styles.img} source={image}>
           <View style={styles.center}>
